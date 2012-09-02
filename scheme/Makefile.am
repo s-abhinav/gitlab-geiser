@@ -11,6 +11,7 @@ nobase_dist_pkgdata_DATA = \
   racket/geiser/completions.rkt \
   racket/geiser/enter.rkt \
   racket/geiser/eval.rkt \
+  racket/geiser/images.rkt \
   racket/geiser/locations.rkt \
   racket/geiser/main.rkt \
   racket/geiser/modules.rkt \
