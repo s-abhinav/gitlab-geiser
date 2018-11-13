@@ -19,7 +19,8 @@ nobase_dist_pkgdata_DATA = \
   racket/geiser/startup.rkt \
   racket/geiser/user.rkt \
   racket/geiser/utils.rkt \
-  chicken/geiser/emacs.scm \
+  chicken/geiser/chicken4.scm \
+  chicken/geiser/chicken5.scm \
   mit/geiser/emacs.scm \
   mit/geiser/geiser.pkg \
   mit/geiser/load.scm \
