@@ -79,6 +79,14 @@
   "Connect to a remote Geiser Guile REPL." t)
 
 ;;;###autoload
+(autoload 'run-nexj "geiser-nexj" "Start a Geiser Nexj REPL." t)
+
+;;;###autoload
+(autoload 'switch-to-nexj "geiser-nexj"
+  "Start a Geiser Nexj REPL, or switch to a running one." t)
+
+
+;;;###autoload
 (autoload 'run-racket "geiser-racket" "Start a Geiser Racket REPL." t)
 
 ;;;###autoload
@@ -144,6 +152,7 @@
         geiser-faces
         geiser-mode
         geiser-guile
+        geiser-nexj
         geiser-image
         geiser-racket
         geiser-chicken

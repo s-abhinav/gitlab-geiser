@@ -7,6 +7,7 @@ nobase_dist_pkgdata_DATA = \
   guile/geiser/modules.scm \
   guile/geiser/utils.scm \
   guile/geiser/xref.scm \
+  nexj/geiser/emacs.scm \
   racket/geiser/autodoc.rkt \
   racket/geiser/completions.rkt \
   racket/geiser/enter.rkt \
