@@ -62,11 +62,19 @@
 (defun geiser-nexj--geiser-procedure (proc &rest args)
   (case proc
     ((eval compile)
-     (format "(geiser:eval '%s)" (mapconcat 'identity (cdr args) " ")))
+     (let
+	 ((form (mapconcat 'identity (cdr args) " "))
+	  (module (cond ((string-equal "'()" (car args))
+                          "'()")
+                         ((and (car args))
+                             (concat "'" (car args)))
+                         (t
+                          "#f"))))
+	 (format "(geiser:eval '%s)" form)))
     ((no-values)
      "(geiser:no-values)")
     (t (let ((form (mapconcat 'identity args " ")))
-	 (message "proc: %s, form: %s" proc form)))))
+	 (format "(geiser:%s %s)" proc form)))))
 
 (defun geiser-nexj--exit-command () "^C")
 
